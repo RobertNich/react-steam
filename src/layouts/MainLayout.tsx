@@ -1,6 +1,7 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { Divider } from "../components/common/Divider";
 import { LanguageButton } from "../components/main/LanguageButton";
+import logoImage from "../assets/logo_steam.svg";
+import downloadImage from "../assets/icon-download.svg";
 
 export const MainLayout = () => {
   return (
@@ -9,23 +10,33 @@ export const MainLayout = () => {
         <div className="loginBar">
           {/* seperate to a seperate component with icon. */}
           <Link to="install" className="install">
-            Install Steam
+            <img width={20} src={downloadImage} alt="download" />
+            <p>Install Steam</p>
           </Link>
-          <Link to="login">login</Link>
-          <Divider orientation="vertical" />
+          <Link style={{ color: "#b9b9b9" }} to="login">
+            login
+          </Link>
+          <p style={{ paddingLeft: "15px" }}>|</p>
           <LanguageButton />
         </div>
         <div className="navBar">
-          <div className="logo" />
+          <img src={logoImage} width={180} alt="logo" />
           <div className="nav-links">
-            <NavLink to="store">Store</NavLink>
-            <NavLink to="store">Community</NavLink>
-            <NavLink to="store">About</NavLink>
-            <NavLink to="store">Support</NavLink>
+            <NavLink
+              style={{ color: "#1c9cf1", borderBottom: "3px solid #1c9cf1" }}
+              to="store"
+            >
+              STORE
+            </NavLink>
+            <NavLink to="store">COMMUNITY</NavLink>
+            <NavLink to="store">ABOUT</NavLink>
+            <NavLink to="store">SUPPORT</NavLink>
           </div>
         </div>
       </div>
-      <Outlet />
+      <div className="outlet">
+        <Outlet />
+      </div>
     </>
   );
 };
