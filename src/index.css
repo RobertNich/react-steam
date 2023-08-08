@@ -16,11 +16,17 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
+}
+
+span {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
 }
 
 body {
@@ -118,6 +124,12 @@ button:focus-visible {
   border-left-color: #bbb;
 }
 
+.outlet {
+  position: relative;
+  width: 100%;
+  top: 115px;
+}
+
 .appBar {
   width: 100%;
   height: 150px;
@@ -127,6 +139,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  z-index: 5;
 }
 
 .loginBar {
@@ -162,7 +175,8 @@ button:focus-visible {
 }
 
 .install {
-  padding: 2px 10px;
+  height: 30px;
+  padding: 0px 10px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -170,9 +184,106 @@ button:focus-visible {
   color: #fff;
   cursor: pointer;
   margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .install:hover {
   background-color: #74c95d;
   transition: background-color 0.25s;
+}
+
+/* ### COMPONENTS ### */
+.banner-image {
+  width: 100%;
+  height: 600px;
+  background-color: rgb(54, 205, 197);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.banner-image a {
+  color: white;
+}
+
+.banner-bar {
+  width: 1500px;
+  height: 35px;
+  position: relative;
+  top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #40719e, #1f468a);
+}
+
+.banner-search-bar {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #316282;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.banner-search-bar p {
+  color: #000000;
+}
+
+.search-icon {
+  background-color: #549fcb;
+  padding: 3px;
+}
+
+.banner-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner-links a {
+  padding: 15px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-label {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #556070, #2e3137);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-menu a {
+  padding: 0px;
+}
+
+.dropdown-menu a:hover {
+  border-bottom: 1px solid #fff;
 }
