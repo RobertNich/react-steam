@@ -230,12 +230,15 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   background-color: #316282;
-  padding-left: 10px;
   padding-right: 5px;
 }
 
-.banner-search-bar p {
-  color: #000000;
+.banner-input {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  background-color: #316282;
+  border: none;
 }
 
 .search-icon {
@@ -286,4 +289,137 @@ button:focus-visible {
 
 .dropdown-menu a:hover {
   border-bottom: 1px solid #fff;
+}
+
+.featured-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.featured-main-column {
+  width: 100%;
+  background-color: #2b2a3c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.featured-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.featured-sidebar-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-sidebar-section h4 {
+  text-transform: uppercase;
+  color: #8cafd0;
+}
+
+.featured-sidebar-section h5 {
+  text-transform: uppercase;
+  color: #516c83;
+}
+
+.featured-sidebar-section p {
+  color: #a3b2c3;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.9s ease;
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicator {
+  width: 20px;
+  height: 10px;
+  padding: 0;
+  margin: 0 5px;
+  border-radius: 2px;
+  background-color: #504d5f;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #707389;
+}
+
+.carousel-thumbnails-container {
+  width: 400px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.carousel-thumbnail {
+  width: 180px;
+  height: 90px;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: row;
+}
+
+.slide-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #1a1a1a;
+  padding-left: 15px;
+}
+
+.slide-info h3 {
+  text-transform: uppercase;
+}
+
+.carousel-price-platform {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.carousel-platforms {
+  display: flex;
+  flex-direction: row;
 }
