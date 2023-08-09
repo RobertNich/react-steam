@@ -66,7 +66,7 @@ export const StoreBanner = () => {
             <Link to="">Labs</Link>
           </div>
           <div className="banner-search-bar">
-            <p>search</p>
+            <input className="banner-input" placeholder="search" />
             <img
               src={searchIcon}
               width={20}
