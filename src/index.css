@@ -75,6 +75,16 @@ button:focus-visible {
   }
 }
 
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 .divider-horizontal {
   width: 100%;
   height: 1px;
@@ -434,4 +444,19 @@ button:focus-visible {
 .carousel-platforms {
   display: flex;
   flex-direction: row;
+}
+
+.offer-carousel-container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 200px);
+  gap: 10px;
+  background-color: green;
+  justify-content: center;
+}
+
+.offer-carousel-grid-4 div:nth-child(1),
+.offer-carousel-grid-4 div:nth-child(2) {
+  grid-row: span 2;
+  background-color: red;
 }
