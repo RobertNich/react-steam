@@ -14,7 +14,7 @@ import remnant2 from "../../assets/carousel-images/remnant2.jpg";
 import remnant3 from "../../assets/carousel-images/remnant3.jpg";
 import remnant4 from "../../assets/carousel-images/remnant4.jpg";
 
-import { Carousel } from "../common/Carousel";
+import { InfoCarousel } from "../common/InfoCarousel";
 
 export const FeaturedCarousel = () => {
   const starfieldThumbnails = [starfield1, starfield2, starfield3, starfield4];
@@ -46,5 +46,5 @@ export const FeaturedCarousel = () => {
       platforms: ["win", "mac", "lin"],
     },
   ];
-  return <Carousel slides={slides} />;
+  return <InfoCarousel title="featured & recommended" slides={slides} />;
 };
