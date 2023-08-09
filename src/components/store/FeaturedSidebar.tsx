@@ -4,7 +4,12 @@ export const FeaturedSidebar = () => {
   return (
     <div className="featured-sidebar">
       <div className="featured-sidebar-section">
-        <img width={100} src={featureCards} alt="feature-cards" />
+        <img
+          width={200}
+          src={featureCards}
+          alt="feature-cards"
+          className="featured-sidebar-image"
+        />
         <h4>Steam gift cards</h4>
         <p>Give the gift of game</p>
       </div>

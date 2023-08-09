@@ -214,7 +214,7 @@ button:focus-visible {
   width: 1500px;
   height: 35px;
   position: relative;
-  top: 35px;
+  top: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -295,12 +295,12 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  background-color: #2b2a3c;
+  padding-bottom: 40px;
 }
 
 .featured-main-column {
   width: 100%;
-  background-color: #2b2a3c;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -310,28 +310,40 @@ button:focus-visible {
 .featured-sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px 0 0 40px;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-sidebar-section {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2px;
 }
 
 .featured-sidebar-section h4 {
   text-transform: uppercase;
   color: #8cafd0;
+  margin: 0px;
+  padding: 0px;
 }
 
 .featured-sidebar-section h5 {
   text-transform: uppercase;
   color: #516c83;
+  margin: 0px;
+  padding: 0px;
 }
 
 .featured-sidebar-section p {
   color: #a3b2c3;
+  margin: 0px;
+  padding: 0px;
 }
 
 .carousel-container {
