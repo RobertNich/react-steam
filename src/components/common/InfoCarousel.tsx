@@ -34,6 +34,7 @@ export const InfoCarousel = ({ title, slides }: Props) => {
 
   const goToImage = (index: number) => {
     setCurrentIndex(index);
+    setHoveredImage(slides[index].cover);
   };
 
   return (

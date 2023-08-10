@@ -448,15 +448,125 @@ button:focus-visible {
 
 .offer-carousel-container {
   display: grid;
-  grid-template-columns: repeat(3, 350px);
+  grid-template-columns: repeat(3, 300px);
   grid-template-rows: repeat(2, 200px);
   gap: 10px;
-  background-color: green;
   justify-content: center;
 }
 
-.offer-carousel-grid-4 div:nth-child(1),
-.offer-carousel-grid-4 div:nth-child(2) {
+.offer-carousel-grid-3 div:nth-child(-n + 3) {
   grid-row: span 2;
-  background-color: red;
+}
+
+.offer-carousel-grid-4 div:nth-child(-n + 2) {
+  grid-row: span 2;
+}
+
+.offer-carousel-grid-5 div:nth-child(-n + 1) {
+  grid-row: span 2;
+}
+
+.special-offers-cover {
+  width: 100%;
+  height: 60%;
+}
+
+.full-discount {
+  position: relative;
+  bottom: 30px;
+}
+
+.discount-tag-long {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+}
+
+.discount-tag-percent {
+  width: 40%;
+  height: 100%;
+  background-color: #37703d;
+  color: #aaf924;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discount-tag-percent h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.discount-tag-reduced {
+  background-color: #2a302e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.discount-tag-reduced p {
+  margin: 0;
+  padding: 0;
+  color: #848484;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.discount-tag-reduced h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #aaf924;
+}
+
+.panel-container {
+  background-color: #1f468a;
+}
+
+.discount-percent-only {
+  background-color: #37703d;
+  color: #aaf924;
+  font-size: 28px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-date {
+  font-size: 12px;
+  color: #b4b4eb;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.full-panel-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.small-panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.small-panel-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5px;
+  padding-top: 13px;
 }
