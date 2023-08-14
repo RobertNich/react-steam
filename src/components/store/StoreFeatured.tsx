@@ -5,6 +5,7 @@ import secondImage from "../../assets/carousel-images/payday2.jpg";
 import thirdImage from "../../assets/carousel-images/payday3.jpg";
 import fourthImage from "../../assets/carousel-images/payday4.jpg";
 import { SpecialOffersCarousel } from "./SpecialOffersCarousel";
+import { PromoImage } from "./PromoImage";
 
 const testOffers = {
   title: "special offers",
@@ -55,6 +56,7 @@ export const StoreFeatured = () => {
       <FeaturedSidebar />
       <div className="featured-main-column">
         <FeaturedCarousel />
+        <PromoImage />
         <SpecialOffersCarousel
           title={testOffers.title}
           slides={testOffers.slides}
