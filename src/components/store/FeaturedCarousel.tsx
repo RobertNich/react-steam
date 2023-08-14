@@ -35,7 +35,7 @@ export const FeaturedCarousel = () => {
       thumbnails: paydayThumbnails,
       subtitle: "Pre-Purcahse Now",
       price: "A$ 59.95",
-      platforms: ["win", "mac", "lin"],
+      platforms: ["win", "lin"],
     },
     {
       cover: remnantCover,
@@ -43,7 +43,7 @@ export const FeaturedCarousel = () => {
       thumbnails: remnantThumbnails,
       subtitle: "Available Now",
       price: "A$ 74.50",
-      platforms: ["win", "mac", "lin"],
+      platforms: ["win"],
     },
   ];
   return <InfoCarousel title="featured & recommended" slides={slides} />;
