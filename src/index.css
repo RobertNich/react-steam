@@ -1,3 +1,5 @@
+/* ### BASE ELEMENTS ### */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -75,6 +77,8 @@ button:focus-visible {
   }
 }
 
+/* ### BASE CLASSES ### */
+
 .flex-column-start {
   display: flex;
   flex-direction: column;
@@ -85,55 +89,9 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.divider-horizontal {
-  width: 100%;
-  height: 1px;
-  margin: 10px 0px;
-}
+/* ### COMPONENTS ### */
 
-.divider-vertical {
-  width: 1px;
-  height: 100%;
-  margin: 0px 10px;
-}
-
-.divider-dashed {
-  border-style: dashed;
-}
-
-.divider-dotted {
-  border-style: dotted;
-}
-
-.divider-solid {
-  border-style: solid;
-}
-
-.divider-rounded {
-  border-style: solid;
-  border-radius: 5px;
-}
-
-.divider-horizontal.divider-dashed,
-.divider-horizontal.divider-dotted,
-.divider-horizontal.divider-solid,
-.divider-horizontal.divider-rounded {
-  border-top-width: 3px;
-  border-top-color: #bbb;
-}
-
-.divider-vertical,
-.divider-dashed,
-.divider-vertical,
-.divider-dotted,
-.divider-vertical,
-.divider-solid,
-.divider-vertical,
-.divider-rounded {
-  border-left-width: 3px;
-  border-left-color: #bbb;
-}
-
+/* # Main Layout # */
 .outlet {
   position: relative;
   width: 100%;
@@ -206,7 +164,7 @@ button:focus-visible {
   transition: background-color 0.25s;
 }
 
-/* ### COMPONENTS ### */
+/* # Banner # */
 .banner-image {
   width: 100%;
   height: 600px;
@@ -267,6 +225,7 @@ button:focus-visible {
   padding: 15px;
 }
 
+/* # Featured Nav Bar # */
 .dropdown {
   position: relative;
 }
@@ -282,7 +241,7 @@ button:focus-visible {
   top: 29px;
   left: 0;
   background-image: linear-gradient(to bottom right, #556070, #2e3137);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 15px;
   text-align: left;
 }
@@ -301,22 +260,23 @@ button:focus-visible {
   border-bottom: 1px solid #fff;
 }
 
+/* # Featured Container # */
 .featured-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #2b2a3c;
+  background-color: #1c2838;
   padding-bottom: 40px;
 }
 
 .featured-main-column {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
+/* # Featured Sidebar # */
 .featured-sidebar {
   display: flex;
   flex-direction: column;
@@ -324,7 +284,6 @@ button:focus-visible {
   align-items: flex-start;
   gap: 20px;
   padding: 40px 0 0 40px;
-  width: 100%;
   height: 100%;
 }
 
@@ -356,25 +315,66 @@ button:focus-visible {
   padding: 0px;
 }
 
+/* # Featured Carousel # */
 .carousel-container {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+.carousel-slide {
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .carousel-image {
-  width: 800px;
+  width: 600px;
   height: 400px;
   object-fit: cover;
   transition: opacity 0.9s ease;
 }
 
-.nav-button {
-  background-color: rgba(0, 0, 0, 0.5);
+.carousel-side-buttons {
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  height: 100px;
+  border-radius: 0;
+  font-weight: 900;
+}
+
+.carousel-side-button-left {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 29, 41, 1) 75%,
+    rgba(27, 90, 123, 0) 100%
+  );
+}
+
+.carousel-side-button-right {
+  background: linear-gradient(
+    90deg,
+    rgba(27, 90, 123, 0) 0%,
+    rgba(20, 29, 41, 1) 25%
+  );
+}
+
+.carousel-side-button-left:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(71, 94, 115, 1) 75%,
+    rgba(27, 90, 123, 0) 100%
+  );
+}
+
+.carousel-side-button-right:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(27, 90, 123, 0) 0%,
+    rgba(71, 94, 115, 1) 25%
+  );
 }
 
 .carousel-indicators {
@@ -385,7 +385,7 @@ button:focus-visible {
   display: flex;
 }
 
-.indicator {
+.carousel-indicator {
   width: 20px;
   height: 10px;
   padding: 0;
@@ -396,7 +396,7 @@ button:focus-visible {
   transition: background-color 0.3s;
 }
 
-.indicator.active {
+.carousel-indicator.active {
   background-color: #707389;
 }
 
@@ -411,11 +411,6 @@ button:focus-visible {
 .carousel-thumbnail {
   width: 180px;
   height: 90px;
-}
-
-.carousel-slide {
-  display: flex;
-  flex-direction: row;
 }
 
 .slide-info {
@@ -446,9 +441,21 @@ button:focus-visible {
   flex-direction: row;
 }
 
+/* # Offer Carousel # */
+
+.special-offers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 70px 0 70px;
+  margin-top: 40px;
+}
+
 .offer-carousel-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 330px);
   grid-template-rows: repeat(2, 200px);
   gap: 10px;
   justify-content: center;
@@ -464,6 +471,25 @@ button:focus-visible {
 
 .offer-carousel-grid-5 div:nth-child(-n + 1) {
   grid-row: span 2;
+}
+
+.panel-container {
+  background: linear-gradient(
+    45deg,
+    rgba(27, 90, 123, 1) 4%,
+    rgba(28, 103, 140, 1) 7%,
+    rgba(37, 126, 166, 1) 11%,
+    rgba(27, 90, 123, 1) 20%,
+    rgba(35, 124, 156, 1) 29%,
+    rgba(27, 90, 123, 1) 37%,
+    rgba(28, 92, 132, 1) 43%,
+    rgba(28, 116, 156, 1) 49%,
+    rgba(28, 103, 140, 1) 56%,
+    rgba(28, 92, 132, 1) 62%,
+    rgba(36, 115, 155, 1) 69%,
+    rgba(27, 90, 123, 1) 73%,
+    rgba(37, 126, 166, 1) 84%
+  );
 }
 
 .special-offers-cover {
@@ -524,10 +550,6 @@ button:focus-visible {
   padding: 0;
   font-size: 14px;
   color: #aaf924;
-}
-
-.panel-container {
-  background-color: #1f468a;
 }
 
 .discount-percent-only {

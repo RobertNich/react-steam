@@ -39,7 +39,10 @@ export const InfoCarousel = ({ title, slides }: Props) => {
 
   return (
     <div className="carousel-container">
-      <button onClick={prevImage} className="nav-button">
+      <button
+        onClick={prevImage}
+        className="carousel-side-buttons carousel-side-button-left"
+      >
         &lt;
       </button>
       <div>
@@ -82,7 +85,10 @@ export const InfoCarousel = ({ title, slides }: Props) => {
         </div>
       </div>
 
-      <button onClick={nextImage} className="nav-button">
+      <button
+        onClick={nextImage}
+        className="carousel-side-buttons carousel-side-button-right"
+      >
         &gt;
       </button>
 
@@ -91,7 +97,9 @@ export const InfoCarousel = ({ title, slides }: Props) => {
           <button
             key={index}
             onClick={() => goToImage(index)}
-            className={`indicator ${index === currentIndex ? "active" : ""}`}
+            className={`carousel-indicator ${
+              index === currentIndex ? "active" : ""
+            }`}
           />
         ))}
       </div>

@@ -151,8 +151,8 @@ const SmallPanel = ({
 
 export const SpecialOffersCarousel = ({ title, slides }: Props) => {
   return (
-    <div>
-      {title ? <h4>{title}</h4> : <></>}
+    <div className="special-offers-container">
+      {title ? <h4 className="uppercase">{title}</h4> : <></>}
       {slides.map((slide) => (
         <div
           className={`offer-carousel-container offer-carousel-grid-${slide.panels.length}`}
