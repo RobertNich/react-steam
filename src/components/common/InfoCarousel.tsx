@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PlatformIcon } from "./PlatformIcon";
 
 interface Props {
   title?: string;
@@ -73,10 +74,9 @@ export const InfoCarousel = ({ title, slides }: Props) => {
               <h4>{slides[currentIndex].subtitle}</h4>
               <div className="carousel-price-platform">
                 <p>{slides[currentIndex].price}</p>
-                {/* Add a new component to handle displaying platform icons */}
                 <div className="carousel-platforms">
                   {slides[currentIndex].platforms.map((platform) => (
-                    <p>{platform}</p>
+                    <PlatformIcon platform={platform} />
                   ))}
                 </div>
               </div>
