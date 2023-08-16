@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Dropdown } from "../common/Dropdown";
+import bannerImage from "../../assets/banner.png";
 import searchIcon from "../../assets/icon-search.svg";
 
 export const StoreBanner = () => {
@@ -55,11 +56,18 @@ export const StoreBanner = () => {
 
   return (
     <>
-      <div className="banner-image">
+      <div className="banner-container">
+        <img src={bannerImage} alt="banner-image" className="banner-image" />
         <div className="banner-bar">
           <div className="banner-links">
-            <Dropdown label="Your Store" items={yourStoreItems} />
-            <Dropdown label="News & Noteworthy" items={newsItems} />
+            <div className="banner-dropdowns-full">
+              <Dropdown label="Your Store" items={yourStoreItems} />
+              <Dropdown label="News & Noteworthy" items={newsItems} />
+            </div>
+            <div className="banner-dropdowns-small">
+              <Link to="">Your Store</Link>
+              <Link to="">News & Noteworthy</Link>
+            </div>
             <Link to="">Categories</Link>
             <Link to="">Points Shop</Link>
             <Link to="">News</Link>
