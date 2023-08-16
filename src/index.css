@@ -225,29 +225,27 @@ button:focus-visible {
 }
 
 /* # Banner # */
-.banner-image {
+.banner-container {
   width: 100%;
   height: 450px;
   margin-top: 35px;
-  background-image: url("../src/assets/banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
-.banner-image a {
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-container a {
   color: white;
 }
 
 .banner-bar {
-  width: 1200px;
+  width: 100%;
   height: 40px;
   position: relative;
-  padding: 0 5px 0 5px;
-  top: 20px;
+  bottom: 420px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -263,7 +261,9 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   background-color: #316282;
-  padding-right: 5px;
+  padding: 1px;
+  position: relative;
+  right: 10px;
 }
 
 .banner-input {
@@ -284,16 +284,31 @@ button:focus-visible {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  left: 10px;
+}
+
+.banner-dropdowns-small {
+  display: none;
 }
 
 .banner-links a {
   padding: 15px;
 }
 
-@media (max-width: 768px) {
+.banner-links a:hover {
+  background-color: #367dbf;
+}
+
+@media (max-width: 1024px) {
+  .banner-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .banner-image {
     height: 300px;
-    position: relative;
   }
 
   .banner-bar {
@@ -301,9 +316,19 @@ button:focus-visible {
     height: 100%;
     padding: 10px 0px;
     flex-direction: column;
+    bottom: 0;
   }
 
   .banner-links {
+    flex-direction: column;
+  }
+
+  .banner-dropdowns-full {
+    display: none;
+  }
+
+  .banner-dropdowns-small {
+    display: flex;
     flex-direction: column;
   }
 }
