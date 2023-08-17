@@ -15,8 +15,11 @@ import remnant3 from "../../assets/carousel-images/remnant3.jpg";
 import remnant4 from "../../assets/carousel-images/remnant4.jpg";
 
 import { InfoCarousel } from "../common/InfoCarousel";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
+import { MobileCarousel } from "../common/MobileCarousel";
 
 export const FeaturedCarousel = () => {
+  const windowWidth = useWindowWidth();
   const starfieldThumbnails = [starfield1, starfield2, starfield3, starfield4];
   const paydayThumbnails = [payday1, payday2, payday3, payday4];
   const remnantThumbnails = [remnant1, remnant2, remnant3, remnant4];
@@ -46,5 +49,18 @@ export const FeaturedCarousel = () => {
       platforms: ["win"],
     },
   ];
-  return <InfoCarousel title="featured & recommended" slides={slides} />;
+
+  const mobileSlides = slides.map((slide) => {
+    return { title: slide.title, image: slide.cover };
+  });
+
+  return (
+    <>
+      {windowWidth > 1024 ? (
+        <InfoCarousel title="featured & recommended" slides={slides} />
+      ) : (
+        <MobileCarousel slides={mobileSlides} />
+      )}
+    </>
+  );
 };

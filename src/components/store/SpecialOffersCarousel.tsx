@@ -1,3 +1,6 @@
+import { useWindowWidth } from "../../hooks/useWindowWidth";
+import { MobileCarousel } from "../common/MobileCarousel";
+
 type PanelConfiguration = {
   [key: number]: ("Full" | "Small")[];
 };
@@ -22,6 +25,7 @@ interface OfferPanel {
   image: string;
   key: string;
   title?: string;
+  game_title: string;
   offer_date?: string;
   discount_percent: string;
   original_price?: string;
@@ -150,24 +154,38 @@ const SmallPanel = ({
 };
 
 export const SpecialOffersCarousel = ({ title, slides }: Props) => {
-  return (
-    <div className="special-offers-container">
-      {title ? <h4 className="uppercase">{title}</h4> : <></>}
-      {slides.map((slide) => (
-        <div
-          className={`offer-carousel-container offer-carousel-grid-${slide.panels.length}`}
-        >
-          {slide.panels.map((panel, index) => {
-            const currentConfig = panelConfig[slide.panels.length];
+  const windowWidth = useWindowWidth();
+  const mobileSlides = slides.reduce((acc, slide) => {
+    slide.panels.forEach((panel) =>
+      acc.push({ title: panel.game_title, image: panel.image })
+    );
+    return acc;
+  }, [] as Array<{ title: string; image: string }>);
 
-            if (currentConfig[index] === "Full") {
-              return <FullPanel {...panel} />;
-            } else {
-              return <SmallPanel {...panel} />;
-            }
-          })}
+  return (
+    <>
+      {windowWidth > 1024 ? (
+        <div className="special-offers-container">
+          {title ? <h4 className="uppercase">{title}</h4> : <></>}
+          {slides.map((slide) => (
+            <div
+              className={`offer-carousel-container offer-carousel-grid-${slide.panels.length}`}
+            >
+              {slide.panels.map((panel, index) => {
+                const currentConfig = panelConfig[slide.panels.length];
+
+                if (currentConfig[index] === "Full") {
+                  return <FullPanel {...panel} />;
+                } else {
+                  return <SmallPanel {...panel} />;
+                }
+              })}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        <MobileCarousel slides={mobileSlides} />
+      )}
+    </>
   );
 };

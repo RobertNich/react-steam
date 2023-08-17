@@ -384,6 +384,12 @@ button:focus-visible {
   align-items: flex-start;
 }
 
+@media (max-width: 1024px) {
+  .featured-container {
+    flex-direction: column;
+  }
+}
+
 /* # Featured Sidebar # */
 .featured-sidebar {
   display: flex;
@@ -421,6 +427,12 @@ button:focus-visible {
   color: #a3b2c3;
   margin: 0px;
   padding: 0px;
+}
+
+@media (max-width: 1024px) {
+  .featured-sidebar {
+    display: none;
+  }
 }
 
 /* # Featured Carousel # */
@@ -551,12 +563,19 @@ button:focus-visible {
 
 /* # Promo Image # */
 .promo-banner-continer {
-  height: 100%;
-  margin: 80px 0 0px 70px;
+  width: 1020px;
+  margin: 80px 0 0 70px;
 }
 
 .promo-image {
-  height: 155px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .promo-banner-continer {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
 }
 
 /* # Offer Carousel # */
@@ -709,6 +728,36 @@ button:focus-visible {
   align-items: center;
   padding-right: 5px;
   padding-top: 13px;
+}
+
+/* # Mobile Carousel # */
+.mobile-carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  width: 100%;
+}
+
+.mobile-carousel-container h4 {
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  margin: 5px 0 5px 0;
+}
+
+.mobile-carousel-image {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.mobile-carousel-indicators {
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
 
 /* # Platform Icon # */
