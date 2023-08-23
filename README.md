@@ -1,7 +1,10 @@
 # React Steam
 
-A recreation of the steam webpage in React.
+### A recreation of Steam's website in React. 
 
+Just a quick mockup for fun and CSS practice.
 
-## Data
-Currently fetches data from local .json files, however I plan to create a simple API that returns some data in the future.
+https://github.com/RobertNich/react-steam/assets/91442713/7aa5055a-d847-41b5-931c-beb0264c7061
+
+https://github.com/RobertNich/react-steam/assets/91442713/2c95bbd9-aaeb-495a-bf93-7c41002301dc
+
