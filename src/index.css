@@ -446,6 +446,7 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 10px;
 }
 
 .carousel-image {
@@ -498,11 +499,9 @@ button:focus-visible {
 }
 
 .carousel-indicators {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  align-self: center;
+  justify-self: center;
 }
 
 .carousel-indicator {
