@@ -51,7 +51,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ffffff00;
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 10px;
@@ -253,7 +253,7 @@ button:focus-visible {
   background-image: linear-gradient(to right, #40719e, #0f216e);
 }
 
-.banner-search-bar {
+.banner-bar .banner-search-bar {
   width: 300px;
   height: 30px;
   display: flex;
@@ -282,10 +282,14 @@ button:focus-visible {
 .banner-links {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  gap: 10px;
   align-items: center;
-  position: relative;
-  left: 10px;
+  margin-left: 30px;
+}
+
+.banner-dropdowns-full {
+  display: flex;
+  gap: 10px;
 }
 
 .banner-dropdowns-small {
@@ -293,7 +297,7 @@ button:focus-visible {
 }
 
 .banner-links a {
-  padding: 15px;
+  padding: 8px;
 }
 
 .banner-links a:hover {
@@ -340,7 +344,8 @@ button:focus-visible {
 
 .dropdown-label {
   cursor: pointer;
-  padding: 15px;
+  left: 10px;
+  padding: 8px;
 }
 
 .dropdown-menu {
